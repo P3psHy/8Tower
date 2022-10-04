@@ -3,6 +3,7 @@ public class Potion{
     private String nom;
     private String description;
     private int qtt;
+    private int effet;
     private Personnage lePerso;
 
     
@@ -16,7 +17,13 @@ public class Potion{
     }
 
 
+    public int getEffet(){
+        return this.effet;
+    }
 
+    public void setEffet(int unEffet){
+        this.effet = unEffet;
+    }
 
     public String getNom() {
         return this.nom;
