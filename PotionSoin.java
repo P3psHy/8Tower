@@ -4,7 +4,7 @@ public class PotionSoin extends Potion{
 
     
     public PotionSoin(int unEffet, String unNom, String uneDescription, int uneQtt, Personnage unPerso){
-        super(unNom, uneDescription, uneQtt, unPerso);
+        super(unEffet, unNom, uneDescription, uneQtt, unPerso);
     }
 
 

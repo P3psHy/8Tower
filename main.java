@@ -5,61 +5,11 @@ import java.util.Random;
 
 public class main{
 
-    public static Monstre spawnMonstre(){
-        Monstre monstre = new Monstre();
-        Random rand = new Random();
-
-        int monstreRandom = rand.nextInt(4);
-
-        switch(monstreRandom){
-            case 0: //Zombie
-                monstre.setNom("Zombie");
-                monstre.setNombreVie(60);
-                monstre.setDegats(16);
-                monstre.setValeurPoints(50);
-                monstre.setEnVie(true);
-                break;
-
-            case 1: //Squelette
-                monstre.setNom("Squelette");
-                monstre.setNombreVie(45);
-                monstre.setDegats(20);
-                monstre.setValeurPoints(60);
-                monstre.setEnVie(true);
-                break;
-
-            case 2: //Orc
-                monstre.setNom("Orc");
-                monstre.setNombreVie(70);
-                monstre.setDegats(12);
-                monstre.setValeurPoints(70);
-                monstre.setEnVie(true);
-                break;
-
-            case 3: //Gobelin
-                monstre.setNom("Gobelin");
-                monstre.setNombreVie(35);
-                monstre.setDegats(11);
-                monstre.setValeurPoints(30);
-                monstre.setEnVie(true);
-                break;
-
-            default: //Slime (= BUG)
-            monstre.setNom("Slime");
-            monstre.setNombreVie(10);
-            monstre.setDegats(10);
-            monstre.setValeurPoints(10);
-            monstre.setEnVie(true);
-        }   
-
-        return monstre;
-    }
-
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        
+        Random r = new Random();
 
         System.out.println("Bienvenue sur TowerMonsterWorld");
         System.out.println("Cliquez sur Jouer");
@@ -86,7 +36,7 @@ public class main{
 
 
             while(Perso.getEnVie()){
-                Monstre m1 = spawnMonstre();
+                Monstre m1 = new Monstre(r.nextInt(4));
                 System.out.println("Vous rencontrez un "+m1.getNom());
                 System.out.println("");
 

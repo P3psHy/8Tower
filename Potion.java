@@ -9,7 +9,8 @@ public class Potion{
     
 
 
-    public Potion(String unNom, String uneDescription, int uneQtt, Personnage unPerso){
+    public Potion(int unEffet, String unNom, String uneDescription, int uneQtt, Personnage unPerso){
+        this.effet = unEffet;
         this.nom = unNom;
         this.description =uneDescription;
         this.qtt = uneQtt;

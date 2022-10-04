@@ -7,7 +7,7 @@ class Personnage{
 
     private static int id=0;
     private String nom;
-    private int nombreVie;
+    private int pointsVie;
     private int mana;
     private int degArme; // A changer lors de l'implémentation des armes
     private int nombrePoints;
@@ -18,7 +18,7 @@ class Personnage{
     public Personnage(String unNom, int uneArme){
         this.id++;
         this.nom = unNom;
-        this.nombreVie = 100;
+        this.pointsVie = 100;
         this.mana = 50;
         this.degArme = uneArme;
         this.nombrePoints = 0;
@@ -28,7 +28,7 @@ class Personnage{
     }
 
     public void etat(){
-        System.out.println(getNom() +" a "+ getNombreVie() +" PV");
+        System.out.println(getNom() +" a "+ getPointsVie() +" PV");
     }
 
     public int attaquer(){
@@ -45,11 +45,11 @@ class Personnage{
     }
 
     public void prendreDegat(double degats){
-        double degatsPris = getNombreVie() - degats;
-        setNombreVie((int)degatsPris);
+        double degatsPris = getPointsVie() - degats;
+        setPointsVie((int)degatsPris);
 
-        if(getNombreVie() <= 0){
-            setNombreVie(0);
+        if(getPointsVie() <= 0){
+            setPointsVie(0);
             setEnVie(false);
         }
     }
@@ -153,12 +153,12 @@ class Personnage{
         this.nom = nom;
     }
 
-    public int getNombreVie() {
-        return this.nombreVie;
+    public int getPointsVie() {
+        return this.pointsVie;
     }
 
-    public void setNombreVie(int nombreVie) {
-        this.nombreVie = nombreVie;
+    public void setPointsVie(int nombreVie) {
+        this.pointsVie = nombreVie;
     }
 
     public int getMana() {

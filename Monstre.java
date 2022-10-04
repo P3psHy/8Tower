@@ -9,15 +9,47 @@ class Monstre{
     private int valeurPoints;
     private boolean enVie = true;
 
-    public Monstre(){
-        
-    }
+    public Monstre(int random){
+        switch(random){
+            case 0: //Zombie
+                setNom("Zombie");
+                setNombreVie(60);
+                setDegats(16);
+                setValeurPoints(50);
+                setEnVie(true);
+                break;
 
-    public Monstre(String unNom, int UnNbPv, int desDegats, int uneValeurPts){
-        this.nom=unNom;
-        this.nombreVie = UnNbPv;
-        this.degats = desDegats;
-        this.valeurPoints = uneValeurPts;
+            case 1: //Squelette
+                setNom("Squelette");
+                setNombreVie(45);
+                setDegats(20);
+                setValeurPoints(60);
+                setEnVie(true);
+                break;
+
+            case 2: //Orc
+                setNom("Orc");
+                setNombreVie(70);
+                setDegats(12);
+                setValeurPoints(70);
+                setEnVie(true);
+                break;
+
+            case 3: //Gobelin
+                setNom("Gobelin");
+                setNombreVie(35);
+                setDegats(11);
+                setValeurPoints(30);
+                setEnVie(true);
+                break;
+
+            default: //Slime (= BUG)
+                setNom("Slime");
+                setNombreVie(10);
+                setDegats(10);
+                setValeurPoints(10);
+                setEnVie(true);
+        }
     }
 
 
