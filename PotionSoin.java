@@ -11,7 +11,7 @@ public class PotionSoin extends Potion{
     
     @Override
     public String toString(){
-        return "Potion: "+super.getNom()+", Effet: "+super.getEffet()+" PV, Quantité: "+super.getQtt()+", Description"+super.getDescription();
+        return "Potion: "+super.getNom()+", Effet: "+super.getEffet()+" PV, Quantité: "+super.getQtt()+", Description: "+super.getDescription();
     }
 
 
