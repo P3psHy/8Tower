@@ -5,10 +5,12 @@ class Monstre{
 
     private String nom;
     private int nombreVie;
-    private double degats;
+    private int degats;
     private int valeurPoints;
     private boolean enVie = true;
 
+
+    //Créé un monstre aléatoire en fonction de random
     public Monstre(int random){
         switch(random){
             case 0: //Zombie
@@ -55,20 +57,28 @@ class Monstre{
 
 
 
-    public double attaquer(){
+    
+    /** Récupère les dégats du monstre + une probabilité de critique, voir méthode attaqueCritique
+     * @return int
+     */
+    public int attaquer(){
         Random rand = new Random();
-        double attaque = this.degats;
+        int attaque = this.degats;
         int randomCrit=rand.nextInt(6);
         if(randomCrit == 1){
             System.out.println(getNom()+" a fait un Coup Critique !");
             attaque+= attaqueCritique();
         }
-        System.out.println(getNom()+" a fait "+(int)attaque + " degats");
+        System.out.println(getNom()+" a fait "+attaque + " degats");
         System.out.println("");
 
         return attaque;
     }
 
+    
+    /** Inflige les dégats reçus au monstre
+     * @param degats
+     */
     public void prendreDegat(int degats){
         setNombreVie(getNombreVie() - degats);
         if(getNombreVie() <= 0){
@@ -80,55 +90,99 @@ class Monstre{
 
 
 
+    
+    /** Renvoi une puissance Critique entre 5 et 15
+     * @return int
+     */
     private int attaqueCritique(){
         Random rand = new Random();
-        int CritPlus = rand.nextInt(15)+10;
+        int CritPlus = rand.nextInt(10)+5;
 
         return CritPlus;
     }
 
-
+    //Afficher l'état du monstre
     public void etat(){
         System.out.println("Monstre: "+ getNom() +", Points de vie restant: "+ getNombreVie() +" PV");
     }
 
-
+    //_____________________________________________________________________
+    
+    /** 
+     * @return String
+     */
     public String getNom() {
         return this.nom;
     }
 
+    
+    /** 
+     * @param nom
+     */
     public void setNom(String nom) {
         this.nom = nom;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getNombreVie() {
         return this.nombreVie;
     }
 
+    
+    /** 
+     * @param nombreVie
+     */
     public void setNombreVie(int nombreVie) {
         this.nombreVie = nombreVie;
     }
 
-    public double getDegats() {
+    
+    /** 
+     * @return double
+     */
+    public int getDegats() {
         return this.degats;
     }
 
-    public void setDegats(double degats) {
+    
+    /** 
+     * @param degats
+     */
+    public void setDegats(int degats) {
         this.degats = degats;
     }
 
+    
+    /** 
+     * @return int
+     */
     public int getValeurPoints() {
         return this.valeurPoints;
     }
 
+    
+    /** 
+     * @param valeurPoints
+     */
     public void setValeurPoints(int valeurPoints) {
         this.valeurPoints = valeurPoints;
     }
 
+    
+    /** 
+     * @return boolean
+     */
     public boolean isEnVie() {
         return this.enVie;
     }
 
+    
+    /** 
+     * @param enVie
+     */
     public void setEnVie(boolean enVie) {
         this.enVie = enVie;
     }
