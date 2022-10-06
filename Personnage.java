@@ -13,7 +13,7 @@ class Personnage{
     private int nombrePoints;
     private boolean enVie;
     private int nombreMonstreTue;
-    private ArrayList <Potion> ListePotions = new ArrayList<>();
+    private ArrayList <Potion> inventairePotion = new ArrayList<>();
 
     public Personnage(String unNom, int uneArme){
         this.id++;
@@ -101,41 +101,37 @@ class Personnage{
         boolean estAjoute = false;
         int i = 0;
 
-        while(this.ListePotions.size() < i){
+        while(this.inventairePotion.size() < i){
 
-            if(potion.getNom().equals(this.ListePotions.get(i).getNom())){
+            if(potion.getNom().equals(this.inventairePotion.get(i).getNom())){
                 estDejaPresent = true;
-                this.ListePotions.get(i).setQtt(this.ListePotions.get(i).getQtt()+1);
+                this.inventairePotion.get(i).setQtt(this.inventairePotion.get(i).getQtt()+1);
             }
 
             i++;
         }
 
         if(!estDejaPresent){
-            this.ListePotions.add(potion);
+            this.inventairePotion.add(potion);
             estAjoute = true;
         }
-        
-        
-    
-
         
         return estAjoute;
     }
 
 
     public void afficherPotion(){
-        for(int i=0; i < this.ListePotions.size(); i++){
-            System.out.println(i+": "+this.ListePotions.get(i).toString());
+        for (Potion potion : inventairePotion) {
+            System.out.println(potion.toString());
         }
     }
 
     public void retirerPotion(int indexPotion){
-        ListePotions.remove(indexPotion);
+        inventairePotion.remove(indexPotion);
     }
 
     public void utiliserPotion(int index){
-        ListePotions.get(index).getEffet();
+        inventairePotion.get(index).getEffet();
     }
 
 
