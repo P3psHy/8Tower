@@ -1,12 +1,9 @@
 public class Potion{
     
-    private String type;
     private String nom;
     private String description;
     private int qtt;
     private int effet;
-
-    
 
 
     public Potion(int unEffet, String unNom, String uneDescription, int uneQtt){
@@ -16,14 +13,6 @@ public class Potion{
         this.qtt = uneQtt;
     }
 
-
-    public String getType(){
-        return this.type;
-    }
-
-    public void setType(String unType){
-        this.type = unType;
-    }
 
     public int getEffet(){
         return this.effet;
