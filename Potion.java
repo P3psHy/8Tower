@@ -6,8 +6,6 @@ public class Potion{
     private int effet;
     private Personnage lePerso;
 
-    
-
 
     public Potion(int unEffet, String unNom, String uneDescription, int uneQtt, Personnage unPerso){
         this.effet = unEffet;
