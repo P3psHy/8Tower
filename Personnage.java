@@ -3,7 +3,7 @@ import java.lang.Math;
 import java.util.ArrayList;
 
 
-class Personnage{
+public class Personnage{
 
     private static int id=0;
     private String nom;
