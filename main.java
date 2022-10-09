@@ -21,8 +21,10 @@ public class main{
             System.out.print("Entrez le nom de votre personnage: ");
             String pseudo = sc.next();
             
+            Armes epee = new Armes("Epee du débutant", 20, "Une épée d'entrainement émoussé");
+
             //Création Personnage & inventaire potion
-            Personnage Perso = new Personnage(pseudo, 20);
+            Personnage Perso = new Personnage(pseudo, epee);
             PotionSoin popoSoinMoyen = new PotionSoin(20,"Potion de soin Moyenne", "une potion de soin régénérant une bonne qantité de vie", 3);
             PotionSoin popoSoinPetit = new PotionSoin(10,"Potion de soin Petite", "une petite potion de soin régénérant peu de vie", 5);
            
