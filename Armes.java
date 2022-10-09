@@ -40,7 +40,8 @@ public class Armes{
         this.description = description;
     }
 
-    public String ToString(){
+    @Override
+    public String toString(){
         return "Nom: "+getNom()+", Degats: "+getDegats()+", Description: "+getDescription();
     }
 

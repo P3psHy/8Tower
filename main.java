@@ -55,7 +55,6 @@ public class main{
                     System.out.println("ETAT MONSTRE");
                     m1.etat();
 
-
                     //Proposition actions possible
                     System.out.println("");
                     System.out.println("Voulez-vous:");
@@ -81,18 +80,12 @@ public class main{
 
                         case "C":
                             Perso.afficherPotion();
-                            System.out.println("3: Retour");
                             System.out.println("");
-                            System.out.println("Que voulez-vous faire:");
+                            System.out.println("Choississez la potion que vous voulez utiliser: ");
                             String choixInv = sc.next();
                             int potion = Integer.parseInt(choixInv);
-                            switch(potion){
-                                case 1:
-                                    potion -= 1;
-                                    Perso.utiliserPotion(potion);
-
-                            }
-                            break;
+                            
+                            Perso.utiliserPotion(potion);
 
                         case "D":
                             Perso.fuir();
