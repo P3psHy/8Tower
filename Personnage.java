@@ -9,19 +9,19 @@ public class Personnage{
     private String nom;
     private int pointsVie;
     private int mana;
-    private int degArme; // A changer lors de l'implémentation des armes
+    private Armes arme; 
     private int nombrePoints;
     private boolean enVie;
     private int nombreMonstreTue;
     private ArrayList <Potion> inventairePotion = new ArrayList<>();
 
 
-    public Personnage(String unNom, int uneArme){
+    public Personnage(String unNom, Armes uneArme){
         this.id++;
         this.nom = unNom;
         this.pointsVie = 100;
         this.mana = 50;
-        this.degArme = uneArme;
+        this.arme = uneArme;
         this.nombrePoints = 0;
         this.enVie = true;
         this.nombreMonstreTue = 0;
@@ -40,7 +40,7 @@ public class Personnage{
      */
     public int attaquer(){
         Random rand = new Random();
-        int attaque = this.degArme;
+        int attaque = this.arme.getDegats();
         int randomCrit=rand.nextInt(4);
         if(randomCrit == 1){
             System.out.println(getNom()+"a fait un Coup Critique !");
@@ -247,17 +247,11 @@ public class Personnage{
     /** 
      * @return int
      */
-    public int getDegArme() {
-        return this.degArme;
+    public String getArme() {
+        return this.arme.toString();
     }
 
-    
-    /** 
-     * @param degArme
-     */
-    public void setDegArme(int degArme) {
-        this.degArme = degArme;
-    }
+
 
     
     /** 
