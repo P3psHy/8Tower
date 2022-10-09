@@ -42,7 +42,8 @@ public class Armes{
 
     @Override
     public String toString(){
-        return "Nom: "+getNom()+", Degats: "+getDegats()+", Description: "+getDescription();
+
+        return getNom()+", Degats: "+getDegats()+", Description: "+getDescription();
     }
 
 }
