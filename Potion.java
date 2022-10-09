@@ -1,18 +1,28 @@
 public class Potion{
     
+    private String type;
     private String nom;
     private String description;
     private int qtt;
     private int effet;
 
 
-    public Potion(int unEffet, String unNom, String uneDescription, int uneQtt){
+    public Potion(String unType, int unEffet, String unNom, String uneDescription, int uneQtt){
+        this.type = unType;
         this.effet = unEffet;
         this.nom = unNom;
         this.description =uneDescription;
         this.qtt = uneQtt;
     }
 
+
+    public int getType(){
+        return this.effet;
+    }
+
+    public void setType(String unType){
+        this.type = unType;
+    }
 
     public int getEffet(){
         return this.effet;
@@ -47,7 +57,7 @@ public class Potion{
     }
 
     public String toString(){
-        return "Nom: "+getNom()+" Description: "+getDescription();
+        return "Type: "+getType()+", Nom: "+getNom()+", Description: "+getDescription();
     }
 
 
