@@ -79,7 +79,18 @@ public class main{
 
                         case "C":
                             Perso.afficherPotion();
-                            System.out.println("Potion");
+                            System.out.println("3: Retour");
+                            System.out.println("");
+                            System.out.println("Que voulez-vous faire:");
+                            String choixInv = sc.next();
+                            int potion = Integer.parseInt(choixInv);
+                            switch(potion){
+                                case 1:
+                                    potion -= 1;
+                                    Perso.utiliserPotion(potion);
+
+                            }
+
                             break;
 
                         case "D":

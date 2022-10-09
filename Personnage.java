@@ -152,8 +152,8 @@ public class Personnage{
 
     //Afficher les potions dans l'inventaire du joueur
     public void afficherPotion(){
-        for (Potion potion : inventairePotion) {
-            System.out.println(potion.toString());
+        for (int i = 0; i<inventairePotion.size(); i++) {
+            System.out.println(i+1 + " : "+ inventairePotion.get(i).toString());
         }
     }
 
@@ -168,9 +168,25 @@ public class Personnage{
     
     /** Utiliser la potion choisis à l'index
      * @param index index de la potion à utiliser
+     * Limiter suivant le nombre de point de vie.
      */
     public void utiliserPotion(int index){
-        inventairePotion.get(index).getEffet();
+        int effect = inventairePotion.get(index).getEffet();
+        switch(effect){
+            case 20:
+                setPointsVie(getPointsVie()+20);
+                inventairePotion.get(index).setQtt(inventairePotion.get(index).getQtt()-1);
+                System.out.println("Vous vous êtes soigner de 20hp.");
+                break;
+
+            case 10:
+                setPointsVie(getPointsVie()+10);
+                inventairePotion.get(index).setQtt(inventairePotion.get(index).getQtt()-1);
+                System.out.println("Vous vous êtes soigner de 10hp.");
+                break;
+            default:
+                System.out.println("Une erreur c'est produit.");
+        }
     }
 
 
