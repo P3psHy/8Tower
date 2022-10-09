@@ -1,7 +1,7 @@
 import java.util.Random;
 
 
-class Monstre{
+public class Monstre{
 
     private String nom;
     private int nombreVie;

@@ -3,7 +3,7 @@ import java.lang.Math;
 import java.util.ArrayList;
 
 
-class Personnage{
+public class Personnage{
 
     private static int id=0;
     private String nom;
@@ -16,7 +16,7 @@ class Personnage{
     private ArrayList <Potion> inventairePotion = new ArrayList<>();
 
     public Personnage(String unNom, int uneArme){
-        this.id++;
+        id++;
         this.nom = unNom;
         this.pointsVie = 100;
         this.mana = 50;
@@ -182,7 +182,7 @@ class Personnage{
      * @return int
      */
     public int getId() {
-        return this.id;
+        return id;
     }
 
     
