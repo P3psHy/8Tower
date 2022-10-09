@@ -3,8 +3,8 @@ public class PotionSoin extends Potion{
 
 
     
-    public PotionSoin(int unEffet, String unNom, String uneDescription, int uneQtt, Personnage unPerso){
-        super(unEffet, unNom, uneDescription, uneQtt, unPerso);
+    public PotionSoin(int unEffet, String unNom, String uneDescription, int uneQtt){
+        super(unEffet, unNom, uneDescription, uneQtt);
     }
 
 

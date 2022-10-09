@@ -4,15 +4,13 @@ public class Potion{
     private String description;
     private int qtt;
     private int effet;
-    private Personnage lePerso;
 
 
-    public Potion(int unEffet, String unNom, String uneDescription, int uneQtt, Personnage unPerso){
+    public Potion(int unEffet, String unNom, String uneDescription, int uneQtt){
         this.effet = unEffet;
         this.nom = unNom;
         this.description =uneDescription;
         this.qtt = uneQtt;
-        this.lePerso = unPerso;
     }
 
 
