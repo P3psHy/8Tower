@@ -15,6 +15,7 @@ class Personnage{
     private int nombreMonstreTue;
     private ArrayList <Potion> inventairePotion = new ArrayList<>();
 
+
     public Personnage(String unNom, int uneArme){
         this.id++;
         this.nom = unNom;

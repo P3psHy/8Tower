@@ -23,8 +23,8 @@ public class main{
             
             //Création Personnage & inventaire potion
             Personnage Perso = new Personnage(pseudo, 20);
-            PotionSoin popoSoinMoyen = new PotionSoin(20,"Potion de soin Moyenne", "une potion de soin régénérant une bonne qantité de vie", 3, Perso);
-            PotionSoin popoSoinPetit = new PotionSoin(10,"Potion de soin Petite", "une petite potion de soin régénérant peu de vie", 5, Perso);
+            PotionSoin popoSoinMoyen = new PotionSoin(20,"Potion de soin Moyenne", "une potion de soin régénérant une bonne qantité de vie", 3);
+            PotionSoin popoSoinPetit = new PotionSoin(10,"Potion de soin Petite", "une petite potion de soin régénérant peu de vie", 5);
            
             Perso.ajouterPotion(popoSoinMoyen);
             Perso.ajouterPotion(popoSoinPetit);
