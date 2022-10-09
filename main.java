@@ -61,7 +61,7 @@ public class main{
                     System.out.println("B:  Défendre");
                     System.out.println("C:  Inventaire Potions");
                     System.out.println("D:  Fuire");
-                    System.out.println("D:  Ne rien faire");
+                    System.out.println("E:  Ne rien faire");
                     String choix = sc.next();
                     System.out.println("");
 
@@ -80,6 +80,8 @@ public class main{
                         case "C":
                             Perso.afficherPotion();
                             System.out.println("Potion");
+                            Perso.retirerPotion(1, 2);
+                            Perso.afficherPotion();
                             break;
 
                         case "D":

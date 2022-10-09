@@ -72,7 +72,6 @@ public class Personnage{
      */
     public double seDefendre(){
         Random rand = new Random();
-
         
         double valeurDefense = (double) (Math.round(rand.nextDouble()*10.0)/10.0);
         System.out.println(getNom()+" s'est défendue à hauteur de "+ valeurDefense * 100 +"%");
@@ -161,8 +160,18 @@ public class Personnage{
     /** Retirer une potion à partir de son index dans l'Arraylist
      * @param indexPotion index de la potion
      */
-    public void retirerPotion(int indexPotion){
-        inventairePotion.remove(indexPotion);
+    public boolean retirerPotion(int indexPotion, int qttPotion){
+        boolean estRetire = false;
+
+        if(inventairePotion.get(indexPotion).getQtt() < qttPotion){
+            inventairePotion.remove(indexPotion);
+            estRetire = true;
+        }else{
+            inventairePotion.get(indexPotion).setQtt(inventairePotion.get(indexPotion).getQtt()-qttPotion);
+            estRetire = true;
+        }
+
+        return estRetire;
     }
 
     
