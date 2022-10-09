@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -8,6 +9,11 @@ public class main{
 
     public static void main(String[] args) {
 
+        ArrayList <String> listChoix = new ArrayList<>();
+        listChoix.add("A");
+        listChoix.add("B");
+        listChoix.add("C");
+        listChoix.add("D");
         Scanner sc = new Scanner(System.in);
         Random r = new Random();
 
@@ -20,11 +26,52 @@ public class main{
 
             System.out.print("Entrez le nom de votre personnage: ");
             String pseudo = sc.next();
+            ArrayList <Armes> listArme = new ArrayList<>();
             
             Armes epee = new Armes("Epee du débutant", 20, "Une épée d'entrainement émoussé");
+            Armes hache = new Armes("Hache du débutant", 25, "Une hâche puissante pouvant tout découper");
+            Armes arc = new Armes("Arc du débutant", 15, "Un arc avec des flêches puissantes");
+            Armes hallebarde = new Armes("Hallebarde du débutant", 15, "Une hallebarde qui fait peur (arme par défaut)");
+            listArme.add(epee);
+            listArme.add(hache);
+            listArme.add(arc);
+            listArme.add(hallebarde);
+            Armes armeJoueur;
+            
+            System.out.println("");
+            System.out.println("Choisissez une armes:");
+            for (int i = 0; i<listArme.size(); i++){
+               System.out.println(listChoix.get(i)+ " : " +listArme.get(i).toString());
+            }
+            String armeChoisie = sc.next();
+
+
+
+            switch(armeChoisie){
+                case "A":
+                    armeJoueur = epee;
+                    System.out.println("L'épée a été selectionner.");
+                    break;
+                
+                case "B": 
+                    armeJoueur = hache;
+                    System.out.println("La hâche a été selectionner.");
+                    break;
+                    
+                case "C": 
+                    armeJoueur = arc;
+                    System.out.println("L'arc a été selectionner.");
+                    break;
+
+                default:
+                    System.out.println("Une erreur à été fait, l'hallebarde a été sélectionner.");
+                    armeJoueur = hallebarde;
+                    break;
+            }
+
 
             //Création Personnage & inventaire potion
-            Personnage Perso = new Personnage(pseudo, epee);
+            Personnage Perso = new Personnage(pseudo, armeJoueur);
             PotionSoin popoSoinMoyen = new PotionSoin(20,"Potion de soin Moyenne", "une potion de soin régénérant une bonne qantité de vie", 3);
             PotionSoin popoSoinPetit = new PotionSoin(10,"Potion de soin Petite", "une petite potion de soin régénérant peu de vie", 5);
            
