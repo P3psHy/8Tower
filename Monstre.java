@@ -61,15 +61,15 @@ public class Monstre{
     /** Récupère les dégats du monstre + une probabilité de critique, voir méthode attaqueCritique
      * @return int
      */
-    public int attaquer(){
+    public int attaquer(boolean faitCritique){
         Random rand = new Random();
         int attaque = this.degats;
         int randomCrit=rand.nextInt(6);
-        if(randomCrit == 1){
+        if(randomCrit == 1 || faitCritique){
             System.out.println(getNom()+" a fait un Coup Critique !");
             attaque+= attaqueCritique();
         }
-        System.out.println(getNom()+" a fait "+attaque + " degats");
+        System.out.println(getNom()+" a fait "+attaque+" degats");
         System.out.println("");
 
         return attaque;

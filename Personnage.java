@@ -81,6 +81,17 @@ public class Personnage{
         return valeurDefense;
     }
 
+    public boolean esquiver(){
+        boolean aEsquive = false;
+        Random rand = new Random();
+
+        if(rand.nextInt(2) == 1){
+            aEsquive = true;
+            System.out.println("Vous avez esquivé l'attaque du monstre");
+        }
+        
+        return aEsquive;
+    }
 
     
     /** Renvoi une puissance Critique entre 10 et 25

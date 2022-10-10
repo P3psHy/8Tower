@@ -109,9 +109,10 @@ public class main{
                     System.out.println("Voulez-vous:");
                     System.out.println("A:  Attaquer");
                     System.out.println("B:  Défendre");
-                    System.out.println("C:  Inventaire Potions");
-                    System.out.println("D:  Fuire");
-                    System.out.println("E:  Ne rien faire");
+                    System.out.println("C:  Esquiver");
+                    System.out.println("D:  Inventaire Potions");
+                    System.out.println("E:  Fuire");
+                    System.out.println("F:  Ne rien faire");
                     String choix = sc.next();
                     System.out.println("");
 
@@ -120,14 +121,21 @@ public class main{
 
                         case "A":
                             m1.prendreDegat(Perso.attaquer());
-                            Perso.prendreDegat(m1.attaquer());
+                            Perso.prendreDegat(m1.attaquer(false));
                             break;
 
                         case "B":
-                            Perso.prendreDegat(m1.attaquer()*Perso.seDefendre());
+                            Perso.prendreDegat(m1.attaquer(false)*Perso.seDefendre());
                             break;
 
                         case "C":
+                            if(!Perso.esquiver()){
+                                System.out.println("Vous avez raté votre esquive, vous prenez un coup critique");
+                                Perso.prendreDegat(m1.attaquer(true));
+                            }
+                            break;
+
+                        case "D":
                             Perso.afficherPotion();
                             System.out.println("");
                             System.out.println("Choississez la potion que vous voulez utiliser: ");
@@ -137,10 +145,10 @@ public class main{
                             Perso.utiliserPotion(potion);
                             break;
 
-                        case "D":
+                        case "E":
                             Perso.fuir();
                             if(Perso.getEnVie()){
-                                Perso.prendreDegat(m1.attaquer());
+                                Perso.prendreDegat(m1.attaquer(false));
                             }
                             break;
 
