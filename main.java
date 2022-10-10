@@ -50,21 +50,21 @@ public class main{
             switch(armeChoisie){
                 case "A":
                     armeJoueur = epee;
-                    System.out.println("L'épée a été selectionner.");
+                    System.out.println("L'épée a été selectionnée.");
                     break;
                 
                 case "B": 
                     armeJoueur = hache;
-                    System.out.println("La hâche a été selectionner.");
+                    System.out.println("La hâche a été selectionnée.");
                     break;
                     
                 case "C": 
                     armeJoueur = arc;
-                    System.out.println("L'arc a été selectionner.");
+                    System.out.println("L'arc a été selectionné.");
                     break;
 
                 default:
-                    System.out.println("Une erreur à été fait, l'hallebarde a été sélectionner.");
+                    System.out.println("Une erreur à été fait, l'hallebarde a été sélectionnée.");
                     armeJoueur = hallebarde;
                     break;
             }
