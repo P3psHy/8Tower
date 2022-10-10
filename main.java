@@ -74,12 +74,11 @@ public class main{
 
             Personnage Perso = new Personnage(pseudo, epee);
             PotionSoin popoSoinMoyen = new PotionSoin("Soin",20,"Potion de soin Moyenne", "une potion de soin régénérant une bonne qantité de vie", 3);
-            PotionMana popoManaPetit = new PotionMana("Mana",10,"Potion de mana Petite", "une petite potion de soin régénérant peu de vie", 5);
-            PotionMana popoTest = new PotionMana("Mana", 10, "Test", "test", 1);
+            PotionMana popoManaPetit = new PotionMana("Mana",10,"Potion de mana Petite", "une petite potion de mana régénérant peu de mana", 5);
+            
            
             Perso.ajouterPotion(popoSoinMoyen);
             Perso.ajouterPotion(popoManaPetit);
-            Perso.ajouterPotion(popoTest);
 
             System.out.println(""); 
             System.out.println("Vous rentrez dans la Tour");

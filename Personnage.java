@@ -31,7 +31,7 @@ public class Personnage{
 
     //Afficher l'état du personnage
     public void etat(){
-        System.out.println(getNom() +" a "+ getPointsVie() +" PV");
+        System.out.println(getNom() +" a "+ getPointsVie() +" PV et "+getMana()+" de Mana");
     }
 
     
@@ -177,7 +177,8 @@ public class Personnage{
      * @param index index de la potion à utiliser
      * Limiter suivant le nombre de point de vie.
      */
-    public void utiliserPotion(int index){
+    public boolean utiliserPotion(int index){
+        boolean estUtilise = true;
         index -=1;
         String effect = inventairePotion.get(index).getType();
         
@@ -194,8 +195,10 @@ public class Personnage{
                 retirerPotion(index, 1);
                 break;
             default:
+                estUtilise = false;
                 System.out.println("Une erreur c'est produit.");
         }
+        return estUtilise;
     }
 
 
