@@ -16,8 +16,8 @@ public class Potion{
     }
 
 
-    public int getType(){
-        return this.effet;
+    public String getType(){
+        return this.type;
     }
 
     public void setType(String unType){

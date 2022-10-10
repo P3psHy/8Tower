@@ -162,14 +162,11 @@ public class Personnage{
      * @param indexPotion index de la potion
      */
     public boolean retirerPotion(int indexPotion, int qttPotion){
-        boolean estRetire = false;
+        boolean estRetire = true;
+        inventairePotion.get(indexPotion).setQtt(inventairePotion.get(indexPotion).getQtt()-qttPotion);
 
-        if(inventairePotion.get(indexPotion).getQtt() < qttPotion){
+        if(inventairePotion.get(indexPotion).getQtt() <= 0){
             inventairePotion.remove(indexPotion);
-            estRetire = true;
-        }else{
-            inventairePotion.get(indexPotion).setQtt(inventairePotion.get(indexPotion).getQtt()-qttPotion);
-            estRetire = true;
         }
 
         return estRetire;
@@ -181,18 +178,20 @@ public class Personnage{
      * Limiter suivant le nombre de point de vie.
      */
     public void utiliserPotion(int index){
-        int effect = inventairePotion.get(index).getEffet();
+        index -=1;
+        String effect = inventairePotion.get(index).getType();
+        
         switch(effect){
-            case 20:
+            case "Soin":
                 setPointsVie(getPointsVie()+20);
-                inventairePotion.get(index).setQtt(inventairePotion.get(index).getQtt()-1);
-                System.out.println("Vous vous êtes soigner de 20hp.");
+                System.out.println("Vous vous êtes soigner de "+inventairePotion.get(index).getEffet()+" HP");
+                retirerPotion(index, 1);
                 break;
 
-            case 10:
+            case "Mana":
                 setPointsVie(getPointsVie()+10);
-                inventairePotion.get(index).setQtt(inventairePotion.get(index).getQtt()-1);
-                System.out.println("Vous vous êtes soigner de 10hp.");
+                System.out.println("Vous avez récupéré de "+inventairePotion.get(index).getEffet()+" Mana");
+                retirerPotion(index, 1);
                 break;
             default:
                 System.out.println("Une erreur c'est produit.");
