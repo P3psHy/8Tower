@@ -201,6 +201,14 @@ public class Personnage{
         return estUtilise;
     }
 
+    public boolean ajouterVie(int qttVie){
+        setPointsVie(getPointsVie()+qttVie);
+        if(getPointsVie()>100){
+            setPointsVie(100);
+        }
+
+        return true;
+    }
 
     
     
