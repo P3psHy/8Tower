@@ -184,13 +184,13 @@ public class Personnage{
         
         switch(effect){
             case "Soin":
-                setPointsVie(getPointsVie()+20);
+                ajouterVie(inventairePotion.get(index).getEffet());
                 System.out.println("Vous vous êtes soigner de "+inventairePotion.get(index).getEffet()+" HP");
                 retirerPotion(index, 1);
                 break;
 
             case "Mana":
-                setPointsVie(getPointsVie()+10);
+                ajouterMana( inventairePotion.get(index).getEffet());
                 System.out.println("Vous avez récupéré de "+inventairePotion.get(index).getEffet()+" Mana");
                 retirerPotion(index, 1);
                 break;
@@ -210,7 +210,25 @@ public class Personnage{
         return true;
     }
 
-    
+    public boolean ajouterMana(int qttMana){
+        setMana(getMana()+qttMana);
+        if(getPointsVie()>50){
+            setMana(50);
+        }
+
+        return true;
+    }
+
+    public boolean retirerMana(int qttMana){
+        setMana(getMana()-qttMana);
+        if(getPointsVie()<0){
+            setMana(0);
+        }
+
+        return true;
+    }
+
+
     
     //_____________________________________________________________________________________________________
 
