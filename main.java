@@ -79,6 +79,7 @@ public class main{
            
             Perso.ajouterPotion(popoSoinMoyen);
             Perso.ajouterPotion(popoManaPetit);
+             
 
             System.out.println(""); 
             System.out.println("Vous rentrez dans la Tour");
