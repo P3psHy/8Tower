@@ -1,0 +1,70 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>441</x><y>90</y><w>189</w><h>369</h></coordinates><panel_attributes>Personnage
+--
+- id: int
+- nom: String
+- pointsVie: int
+- mana: int
+- arme: Armes
+- nombrePoints: int
+- enVie: boolean
+- nombreMonstreTue: int
+
+--
+etat() void
+attaquer() int
+prendreDegat(double degats) void
+seDefendre() double
+esquiver() boolean
+ajouterMonstreTue() void
+ajouterPoints() void
+fuir() void
+ajouterPotion(Potion potion) boolean
+afficherPotion() void
+retirerPotion(int indexPotion, int qttPotion) boolean
+utiliserPotion(int index) boolean
+ajouterVie(int qttVie) boolean
+ajouterMana(int qttMana) boolean
+retirerMana(int qttMana) boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1053</x><y>54</y><w>189</w><h>162</h></coordinates><panel_attributes>Monstre
+--
+- nom: String
+- nombreVie: int
+- degats: int
+- valeurPoints: int
+- enVie: boolean
+
+--
+etat() void
+attaquer(boolean faitCritique) int
+prendreDegat(double degats) void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>117</x><y>99</y><w>189</w><h>117</h></coordinates><panel_attributes>Armes
+--
+- nom: String
+- degats: int
+- description: String
+
+--
+toString() String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>369</y><w>189</w><h>153</h></coordinates><panel_attributes>Potion
+--
+- type: String
+- nom: String
+- degats: int
+- description: String
+- qtt: int
+- effet: int
+
+--
+toString() String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>9</x><y>657</y><w>189</w><h>117</h></coordinates><panel_attributes>PotionSoin
+--
+
+--
+toString() String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>243</x><y>657</y><w>189</w><h>117</h></coordinates><panel_attributes>PotionMana
+--
+
+--
+toString() String
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
