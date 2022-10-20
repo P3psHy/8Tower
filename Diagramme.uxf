@@ -1,31 +1,4 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>441</x><y>90</y><w>189</w><h>369</h></coordinates><panel_attributes>Personnage
---
-- id: int
-- nom: String
-- pointsVie: int
-- mana: int
-- arme: Armes
-- nombrePoints: int
-- enVie: boolean
-- nombreMonstreTue: int
-
---
-etat() void
-attaquer() int
-prendreDegat(double degats) void
-seDefendre() double
-esquiver() boolean
-ajouterMonstreTue() void
-ajouterPoints() void
-fuir() void
-ajouterPotion(Potion potion) boolean
-afficherPotion() void
-retirerPotion(int indexPotion, int qttPotion) boolean
-utiliserPotion(int index) boolean
-ajouterVie(int qttVie) boolean
-ajouterMana(int qttMana) boolean
-retirerMana(int qttMana) boolean
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1053</x><y>54</y><w>189</w><h>162</h></coordinates><panel_attributes>Monstre
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>891</x><y>36</y><w>189</w><h>162</h></coordinates><panel_attributes>Monstre
 --
 - nom: String
 - nombreVie: int
@@ -34,18 +7,18 @@ retirerMana(int qttMana) boolean
 - enVie: boolean
 
 --
-etat() void
-attaquer(boolean faitCritique) int
-prendreDegat(double degats) void
++ etat() void
++ attaquer(boolean faitCritique) int
++ prendreDegat(double degats) void
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>117</x><y>99</y><w>189</w><h>117</h></coordinates><panel_attributes>Armes
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>126</y><w>189</w><h>117</h></coordinates><panel_attributes>Armes
 --
 - nom: String
 - degats: int
 - description: String
 
 --
-toString() String
++ toString() String
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>369</y><w>189</w><h>153</h></coordinates><panel_attributes>Potion
 --
 - type: String
@@ -56,15 +29,46 @@ toString() String
 - effet: int
 
 --
-toString() String
++ toString() String
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>9</x><y>657</y><w>189</w><h>117</h></coordinates><panel_attributes>PotionSoin
 --
 
 --
-toString() String
++ toString() String
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>243</x><y>657</y><w>189</w><h>117</h></coordinates><panel_attributes>PotionMana
 --
 
 --
-toString() String
-</panel_attributes><additional_attributes></additional_attributes></element></diagram>
++ toString() String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>414</y><w>243</w><h>36</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;inventairePotion&gt;</panel_attributes><additional_attributes>10;20;250;20</additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>513</y><w>117</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;160</additional_attributes></element><element><id>Relation</id><coordinates><x>99</x><y>513</y><w>108</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>531</x><y>144</y><w>189</w><h>369</h></coordinates><panel_attributes>Personnage
+--
+- id: int
+- nom: String
+- pointsVie: int
+- mana: int
+- nombrePoints: int
+- enVie: boolean
+- nombreMonstreTue: int
+
+--
++ etat() void
++ attaquer() int
++ prendreDegat(double degats) void
++ seDefendre() double
++ esquiver() boolean
+- attaqueCritique() int
++ ajouterMonstreTue() void
++ ajouterPoints() void
++ fuir() void
++ ajouterPotion(Potion potion) boolean
++ afficherPotion() void
++ retirerPotion(int indexPotion, int qttPotion) boolean
++ utiliserPotion(int index) boolean
++ ajouterVie(int qttVie) boolean
++ ajouterMana(int qttMana) boolean
++ retirerMana(int qttMana) boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>171</y><w>243</w><h>45</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+arme</panel_attributes><additional_attributes>10;20;250;20</additional_attributes></element></diagram>
