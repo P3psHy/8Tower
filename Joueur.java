@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Joueur extends Personnage{
     
     private int mana;
-        private Armes arme;
+    private Armes arme;
     private int nombrePoints;
     private int nombreMonstreTue;
-        private ArrayList <Potion> inventairePotion = new ArrayList<>();
+    private ArrayList <Potion> inventairePotion = new ArrayList<>();
 
     public Joueur(String unNom, Armes uneArme){
         super(unNom, 100, true);

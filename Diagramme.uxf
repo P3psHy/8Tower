@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>891</x><y>36</y><w>189</w><h>162</h></coordinates><panel_attributes>Monstre
+<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>765</x><y>405</y><w>189</w><h>162</h></coordinates><panel_attributes>Monstre
 --
 - nom: String
 - nombreVie: int
@@ -40,12 +40,9 @@
 
 --
 + toString() String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>414</y><w>243</w><h>36</h></coordinates><panel_attributes>lt=&lt;.&gt;
-&lt;inventairePotion&gt;</panel_attributes><additional_attributes>10;20;250;20</additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>513</y><w>117</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;160</additional_attributes></element><element><id>Relation</id><coordinates><x>99</x><y>513</y><w>108</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>531</x><y>144</y><w>189</w><h>369</h></coordinates><panel_attributes>Personnage
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>414</y><w>234</w><h>36</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;inventairePotion&gt;</panel_attributes><additional_attributes>10;20;240;20</additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>513</y><w>117</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;160</additional_attributes></element><element><id>Relation</id><coordinates><x>99</x><y>513</y><w>108</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>522</x><y>405</y><w>189</w><h>369</h></coordinates><panel_attributes>Joueur
 --
-- id: int
-- nom: String
-- pointsVie: int
 - mana: int
 - nombrePoints: int
 - enVie: boolean
@@ -68,7 +65,16 @@
 + ajouterVie(int qttVie) boolean
 + ajouterMana(int qttMana) boolean
 + retirerMana(int qttMana) boolean
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>171</y><w>243</w><h>45</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>180</y><w>252</w><h>243</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1
-arme</panel_attributes><additional_attributes>10;20;250;20</additional_attributes></element></diagram>
+arme</panel_attributes><additional_attributes>10;10;260;250</additional_attributes></element><element><id>UMLClass</id><coordinates><x>639</x><y>153</y><w>189</w><h>162</h></coordinates><panel_attributes>Personnage
+--
+- nom: String
+- pointsVie: int
+- enVie: boolean
+
+--
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>747</x><y>306</y><w>81</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;70;110</additional_attributes></element><element><id>Relation</id><coordinates><x>630</x><y>306</y><w>72</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>60;10;10;110</additional_attributes></element></diagram>
