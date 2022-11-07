@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class main{
 
-
+ 
     public static void main(String[] args) {
 
         ArrayList <String> listChoix = new ArrayList<>();
@@ -72,7 +72,7 @@ public class main{
 
             //Création Personnage & inventaire potion
 
-            Personnage Perso = new Personnage(pseudo, epee);
+            Joueur Perso = new Joueur(pseudo, epee);
             PotionSoin popoSoinMoyen = new PotionSoin("Soin",20,"Potion de soin Moyenne", "une potion de soin régénérant une bonne qantité de vie", 3);
             PotionMana popoManaPetit = new PotionMana("Mana",10,"Potion de mana Petite", "une petite potion de mana régénérant peu de mana", 5);
             
@@ -88,13 +88,13 @@ public class main{
 
 
             //Début du jeu 
-            while(Perso.getEnVie()){
+            while(Perso.isEnVie()){
                 Monstre m1 = new Monstre(r.nextInt(4));
                 System.out.println("Vous rencontrez un "+m1.getNom());
                 System.out.println("");
 
                 //Combat contre un monstre tant que 
-                while(m1.isEnVie() && Perso.getEnVie()){
+                while(m1.isEnVie() && Perso.isEnVie()){
 
                     //Affichage Etats Joueur & Monstre
                     System.out.println("");
@@ -147,7 +147,7 @@ public class main{
 
                         case "E":
                             Perso.fuir();
-                            if(Perso.getEnVie()){
+                            if(Perso.isEnVie()){
                                 Perso.prendreDegat(m1.attaquer(false));
                             }
                             break;
@@ -159,7 +159,7 @@ public class main{
                     }
 
                     //Déclaration mort Joueur
-                    if(!Perso.getEnVie()){
+                    if(!Perso.isEnVie()){
                         System.out.println(Perso.getNom()+" est mort, retour au menu");
                         System.out.println("");
                         System.out.println("Bilan");
