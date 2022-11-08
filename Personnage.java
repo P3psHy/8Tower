@@ -12,6 +12,13 @@ class Personnage{
         this.pointsVie = pointVie;
         this.enVie = enVie;
     }
+
+    public void etat(){
+        System.err.println(getNom()+" a "+getPointsVie()+" HP");
+    }
+
+//________________________________________________________________________________
+
     public String getNom() {
         return nom;
     }

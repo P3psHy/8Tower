@@ -91,6 +91,7 @@ public class Monstre extends Personnage{
     }
 
     //Afficher l'état du monstre
+    @Override
     public void etat(){
         System.out.println("Monstre: "+ getNom() +", Points de vie restant: "+ getPointsVie() +" PV");
     }

@@ -19,7 +19,7 @@ public class Joueur extends Personnage{
         
     }
 
-
+    @Override
     public void etat(){
         System.out.println(getNom()+" a "+getPointsVie()+" PV et "+getMana()+" Manad");
     }
