@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.0.0"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>891</x><y>36</y><w>189</w><h>162</h></coordinates><panel_attributes>Monstre
+<diagram program="umletino" version="15.0.0"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>976</x><y>312</y><w>168</w><h>144</h></coordinates><panel_attributes>Monstre
 --
 - nom: String
 - nombreVie: int
@@ -9,9 +9,10 @@
 --
 + etat() void
 + attaquer(boolean faitCritique) int
+- attaqueCritique() int
 + prendreDegat(double degats) void
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>126</y><w>189</w><h>117</h></coordinates><panel_attributes>Armes
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>728</x><y>680</y><w>168</w><h>104</h></coordinates><panel_attributes>Armes
 --
 - nom: String
 - degats: int
@@ -19,7 +20,7 @@
 
 --
 + toString() String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>369</y><w>189</w><h>153</h></coordinates><panel_attributes>Potion
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>200</x><y>280</y><w>168</w><h>136</h></coordinates><panel_attributes>Potion
 --
 - type: String
 - nom: String
@@ -30,22 +31,19 @@
 
 --
 + toString() String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>9</x><y>657</y><w>189</w><h>117</h></coordinates><panel_attributes>PotionSoin
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>96</x><y>536</y><w>168</w><h>104</h></coordinates><panel_attributes>PotionSoin
 --
 
 --
 + toString() String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>243</x><y>657</y><w>189</w><h>117</h></coordinates><panel_attributes>PotionMana
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>304</x><y>536</y><w>168</w><h>104</h></coordinates><panel_attributes>PotionMana
 --
 
 --
 + toString() String
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>414</y><w>243</w><h>36</h></coordinates><panel_attributes>lt=&lt;.&gt;
-&lt;inventairePotion&gt;</panel_attributes><additional_attributes>10;20;250;20</additional_attributes></element><element><id>Relation</id><coordinates><x>234</x><y>513</y><w>117</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;160</additional_attributes></element><element><id>Relation</id><coordinates><x>99</x><y>513</y><w>108</w><h>162</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>531</x><y>144</y><w>189</w><h>369</h></coordinates><panel_attributes>Personnage
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>320</y><w>208</w><h>32</h></coordinates><panel_attributes>lt=&lt;.&gt;
+&lt;inventairePotion&gt;</panel_attributes><additional_attributes>10;20;240;20</additional_attributes></element><element><id>Relation</id><coordinates><x>296</x><y>408</y><w>104</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;160</additional_attributes></element><element><id>Relation</id><coordinates><x>176</x><y>408</y><w>96</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>100;10;10;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>552</x><y>312</y><w>168</w><h>328</h></coordinates><panel_attributes>Joueur
 --
-- id: int
-- nom: String
-- pointsVie: int
 - mana: int
 - nombrePoints: int
 - enVie: boolean
@@ -68,7 +66,33 @@
 + ajouterVie(int qttVie) boolean
 + ajouterMana(int qttMana) boolean
 + retirerMana(int qttMana) boolean
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>306</x><y>171</y><w>243</w><h>45</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>672</x><y>632</y><w>120</w><h>64</h></coordinates><panel_attributes>lt=-
 m1=1
 m2=1
-arme</panel_attributes><additional_attributes>10;20;250;20</additional_attributes></element></diagram>
+arme</panel_attributes><additional_attributes>130;60;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>776</x><y>72</y><w>168</w><h>144</h></coordinates><panel_attributes>Personnage
+--
+- nom: String
+- pointsVie: int
+- enVie: boolean
+
+--
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>872</x><y>208</y><w>160</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;180;130</additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>208</y><w>184</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>210;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>752</x><y>312</y><w>168</w><h>144</h></coordinates><panel_attributes>Boss
+--
+- nom: String
+- nombreVie: int
+- degats: int
+- valeurPoints: int
+- enVie: boolean
+
+--
++ etat() void
++ attaquer(boolean faitCritique) int
+- attaqueCritique() int
++ prendreDegat(double degats) void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>800</x><y>448</y><w>72</w><h>248</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=1
+arme</panel_attributes><additional_attributes>70;290;10;10</additional_attributes></element></diagram>
