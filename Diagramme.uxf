@@ -1,10 +1,7 @@
 <diagram program="umletino" version="15.0.0"><zoom_level>8</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>976</x><y>312</y><w>168</w><h>144</h></coordinates><panel_attributes>Monstre
 --
-- nom: String
-- nombreVie: int
 - degats: int
 - valeurPoints: int
-- enVie: boolean
 
 --
 + etat() void
@@ -46,7 +43,6 @@
 --
 - mana: int
 - nombrePoints: int
-- enVie: boolean
 - nombreMonstreTue: int
 
 --
@@ -80,11 +76,8 @@ arme</panel_attributes><additional_attributes>90;90;10;10</additional_attributes
 
 </panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>872</x><y>208</y><w>160</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;180;130</additional_attributes></element><element><id>Relation</id><coordinates><x>648</x><y>208</y><w>184</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>210;10;10;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>752</x><y>312</y><w>168</w><h>144</h></coordinates><panel_attributes>Boss
 --
-- nom: String
-- nombreVie: int
 - degats: int
 - valeurPoints: int
-- enVie: boolean
 
 --
 + etat() void

@@ -1,0 +1,13 @@
+{
+    "nom": "Joueur",
+    "pointsVie":100,
+    "mana":100,
+    "nombrePoints":0,
+    "nombreMonstreTue":0,
+    "inventairePotion":
+    {
+        
+    }
+
+
+}
