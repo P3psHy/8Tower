@@ -7,13 +7,14 @@ public class Boss extends Personnage{
 
 
     public Boss(int random){
-        super("Monstre", 1, true);
+        super("Monstre", 1, true, 0);
         switch(random){
             case 0: //Zombie
             
                 setNom("Herrscher de la domination");
                 setPointsVie(60);
                 setArme(arme);
+                super.setDegats(arme.getDegats());
                 setValeurPoints(50);
                 setEnVie(true);
                 break;
@@ -22,6 +23,7 @@ public class Boss extends Personnage{
                 setNom("Deviluke");
                 setPointsVie(45);
                 setArme(arme);
+                super.setDegats(arme.getDegats());
                 setValeurPoints(60);
                 setEnVie(true);
                 break;
@@ -30,6 +32,7 @@ public class Boss extends Personnage{
                 setNom("Mathias");
                 setPointsVie(70);
                 setArme(arme);
+                super.setDegats(arme.getDegats());
                 setValeurPoints(70);
                 setEnVie(true);
                 break;
@@ -38,6 +41,7 @@ public class Boss extends Personnage{
                 setNom("Giga Chad");
                 setPointsVie(10);
                 setArme(arme);
+                super.setDegats(arme.getDegats());
                 setValeurPoints(10);
                 setEnVie(true);
         }
@@ -48,7 +52,7 @@ public class Boss extends Personnage{
      */
     public int attaquer(boolean faitCritique){
         Random rand = new Random();
-        int attaque = arme.getDegats();
+        int attaque = super.getDegats();
         int randomCrit=rand.nextInt(6);
         if(randomCrit == 1 || faitCritique){
             System.out.println(getNom()+" a fait un Coup Critique !");
@@ -98,14 +102,13 @@ public class Boss extends Personnage{
 //_________________________________________________________
 
 
-
-
-
     public void setArme(Armes arme) {
         this.arme = arme;
     }
 
-
+    public Armes getArmes(){
+        return arme;
+    }
 
     public int getValeurPoints() {
         return valeurPoints;

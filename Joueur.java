@@ -11,9 +11,9 @@ public class Joueur extends Personnage{
     private ArrayList <Potion> inventairePotion = new ArrayList<>();
 
     public Joueur(String unNom, Armes uneArme){
-        super(unNom, 100, true);
+        super(unNom, 100, true,0);
         this.mana = 50;
-        this.arme = uneArme;
+        super.setDegats(uneArme.getDegats());
         this.nombrePoints = 0;
         this.nombreMonstreTue = 0;
         
@@ -21,13 +21,15 @@ public class Joueur extends Personnage{
 
     @Override
     public void etat(){
-        System.out.println(getNom()+" a "+getPointsVie()+" PV et "+getMana()+" Manad");
+        System.out.println(getNom()+" a "+(int)getPointsVie()+" PV et "+getMana()+" Manad");
     }
 
+     
     /** Récupère les dégats de l'arme + une probabilité de critique, voir méthode attaqueCritique
      * 
      * @return int retourne valeur attaque
      */
+    /*
     public int attaquer(){
         Random rand = new Random();
         int attaque = this.arme.getDegats();
@@ -40,16 +42,19 @@ public class Joueur extends Personnage{
 
         return attaque;
     }
-
+    */
+    
     /** Renvoi une puissance Critique entre 10 et 25
      * @return int
      */
+    /* 
     private int attaqueCritique(){
         Random rand = new Random();
         int CritPlus = rand.nextInt(15)+10;
 
         return CritPlus;
     }
+    */
 
     /** Renvoi la valeur d'un double qui permet de créer le pourcentage de défense (entre 0 et 1)
      * @return double
@@ -64,19 +69,8 @@ public class Joueur extends Personnage{
         return valeurDefense;
     }
 
-    /**  Inflige les dégats reçus au personnage
-     * 
-     * @param degats dégats à infliger
-     */
-    public void prendreDegat(double degats){
-        double degatsPris = getPointsVie() - degats;
-        setPointsVie((int)degatsPris);
+    
 
-        if(getPointsVie() <= 0){
-            setPointsVie(0);
-            setEnVie(false);
-        }
-    }
 
     public boolean esquiver(){
         boolean aEsquive = false;
@@ -249,6 +243,14 @@ public int getNombreMonstreTue() {
 
 public void setNombreMonstreTue(int nombreMonstreTue) {
     this.nombreMonstreTue = nombreMonstreTue;
+}
+
+public void setArme(Armes arme) {
+    this.arme = arme;
+}
+
+public Armes getArmes(){
+    return arme;
 }
 
 }

@@ -120,18 +120,18 @@ public class main{
                     switch(choix){
 
                         case "A":
-                            m1.prendreDegat(Perso.attaquer());
-                            Perso.prendreDegat(m1.attaquer(false));
+                            m1.prendreDegat(Perso.attaquer(false, 15));
+                            Perso.prendreDegat(m1.attaquer(false, 10));
                             break;
 
                         case "B":
-                            Perso.prendreDegat(m1.attaquer(false)*Perso.seDefendre());
+                            Perso.prendreDegat(m1.attaquer(false, 10)*Perso.seDefendre());
                             break;
 
                         case "C":
                             if(!Perso.esquiver()){
                                 System.out.println("Vous avez raté votre esquive, vous prenez un coup critique");
-                                Perso.prendreDegat(m1.attaquer(true));
+                                Perso.prendreDegat(m1.attaquer(false, 10));
                             }
                             break;
 
@@ -148,7 +148,7 @@ public class main{
                         case "E":
                             Perso.fuir();
                             if(Perso.isEnVie()){
-                                Perso.prendreDegat(m1.attaquer(false));
+                                Perso.prendreDegat(m1.attaquer(false, 10));
                             }
                             break;
 
