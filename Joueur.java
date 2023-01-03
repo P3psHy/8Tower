@@ -253,4 +253,15 @@ public Armes getArmes(){
     return arme;
 }
 
+
+
+public Potion getPotion(int i){
+    return inventairePotion.get(i);
 }
+
+public int getLenghtInventairePotion(){
+    return inventairePotion.size();
+}
+
+}
+
