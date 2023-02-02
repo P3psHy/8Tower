@@ -28,7 +28,7 @@ public class main{
             String pseudo = sc.next();
             ArrayList <Armes> listArme = new ArrayList<>();
             
-            Armes epee = new Armes("Epee du débutant", 20, "Une épée d'entrainement émoussé");
+            Armes epee = new Armes("Epee du débutant", 99999, "Une épée d'entrainement émoussé");
             Armes hache = new Armes("Hache du débutant", 25, "Une hâche puissante pouvant tout découper");
             Armes arc = new Armes("Arc du débutant", 15, "Un arc avec des flêches puissantes");
             Armes hallebarde = new Armes("Hallebarde du débutant", 15, "Une hallebarde qui fait peur (arme par défaut)");

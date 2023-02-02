@@ -146,6 +146,7 @@ public class Joueur extends Personnage{
         for (int i = 0; i<inventairePotion.size(); i++) {
             System.out.println(i+1 + " : "+ inventairePotion.get(i).toString());
         }
+        System.out.println(inventairePotion.size()+1+": Sortir de l'inventaire");
     }
 
     
